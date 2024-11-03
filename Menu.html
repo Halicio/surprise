@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .menu-item {
+            width: 200px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+
+        .menu-item p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .menu-item .price {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .menu-item .btn {
+            padding: 8px 16px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu-item .btn:hover {
+            background-color: #45a049;
+        }
+
+        .cart {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 500px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart h2 {
+            margin-top: 0;
+        }
+
+        .cart-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cart-items li {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .submit-order {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Выбери, чтобы ты хотела</h1>
+    <div class="menu-container">
+        <!-- Пример блюда -->
+        <div class="menu-item" data-name="Тост с индейкой и моцареллой">
+            <img src="C:\Users\user\Desktop\Новая папка (8)\Тост с индейкой и моцареллой.jpg" alt="Тост с индейкой и моцареллой">
+            <h3>Тост с индейкой и моцареллой</h3>
+            <button class="btn" onclick="addToCart('Тост с индейкой и моцареллой')">Добавить в корзину</button>
+        </div>
+        <div class="menu-item" data-name="Боул с курицей и лапшой">
+            <img src="C:\Users\user\Desktop\Новая папка (8)\Боул с курицей и лапшой.jpg" alt="Боул с курицей и лапшой">
+            <h3>Боул с курицей и лапшой</h3>
+            <button class="btn" onclick="addToCart('Боул с курицей и лапшой')">Добавить в корзину</button>
+        </div>
+        <div class="menu-item" data-name="Боул с курицей и лапшой">
+            <img src="C:\Users\user\Desktop\Новая папка (8)\Боул с курицей и лапшой.jpg" alt="Боул с курицей и лапшой">
+            <h3>Боул с курицей и лапшой</h3>
+            <button class="btn" onclick="addToCart('Боул с курицей и лапшой')">Добавить в корзину</button>
+        </div>
+        <div class="menu-item" data-name="Боул с курицей и лапшой">
+            <img src="C:\Users\user\Desktop\Новая папка (8)\Боул с курицей и лапшой.jpg" alt="Боул с курицей и лапшой">
+            <h3>Боул с курицей и лапшой</h3>
+            <button class="btn" onclick="addToCart('Боул с курицей и лапшой')">Добавить в корзину</button>
+        </div>
+        <div class="menu-item" data-name="Боул с курицей и лапшой">
+            <img src="C:\Users\user\Desktop\Новая папка (8)\Боул с курицей и лапшой.jpg" alt="Боул с курицей и лапшой">
+            <h3>Боул с курицей и лапшой</h3>
+            <button class="btn" onclick="addToCart('Боул с курицей и лапшой')">Добавить в корзину</button>
+        </div>
+        <div class="menu-item" data-name="Боул с курицей и лапшой">
+            <img src="C:\Users\user\Desktop\Новая папка (8)\Боул с курицей и лапшой.jpg" alt="Боул с курицей и лапшой">
+            <h3>Боул с курицей и лапшой</h3>
+            <button class="btn" onclick="addToCart('Боул с курицей и лапшой')">Добавить в корзину</button>
+        </div>
+        <div class="menu-item" data-name="Боул с курицей и лапшой">
+            <img src="C:\Users\user\Desktop\Новая папка (8)\Боул с курицей и лапшой.jpg" alt="Боул с курицей и лапшой">
+            <h3>Боул с курицей и лапшой</h3>
+            <button class="btn" onclick="addToCart('Боул с курицей и лапшой')">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2>Корзина</h2>
+        <ul class="cart-items" id="cart-items"></ul>
+        <button class="submit-order" onclick="submitOrder()">Отправить заказ</button>
+    </div>
+
+    <script>
+        const cart = [];
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `${item.name}`;
+                cartItems.appendChild(li);
+            });
+        }
+
+        function submitOrder() {
+            if (cart.length === 0) {
+                alert("Корзина пуста!");
+                return;
+            }
+
+            const orderDetails = cart.map(item => `${item.name} - ${item.price} ₽`).join('\n');
+            alert("Заказ отправлен:\n" + orderDetails);
+            cart.length = 0;
+            updateCart();
+        }
+    </script>
+</body>
+</html>
